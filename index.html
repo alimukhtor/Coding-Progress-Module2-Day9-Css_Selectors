@@ -561,13 +561,36 @@
       searchIcon.remove()
     }
     /* Exercise 17:  */
-    let trimBlogPost = function(){
-      let trimParagraph = document.querySelector(".blog-post:")
-      console.log(trimParagraph.replace())
+    // let trimBlogPost = function(){
+    //   let trimParagraph = document.querySelector(".blog-post:first-of-type")
+    //   console.log(trimParagraph.trim())
+    // }
+
+    /* Exercise 18:  */
+
+    let newPost = function(){
+      let getClass = document.querySelector(".blog-main")
+      let newDiv = document.createElement("div")
+      let newTitle = document.createElement("h2")
+      newTitle.innerText = "NEW BLOG POST AGAIN"
+      let btn = document.createElement("BUTTON")
+      btn.innerText = "NEWER"
+      newDiv.appendChild(newTitle)
+      newDiv.appendChild(btn)
+      getClass.appendChild(newDiv)
     }
 
+    /* Exercise 19:  */
+    // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
 
-
+    let removeLastPost = function(){
+      let getLastPostOfBlogPost = document.querySelector(".blog-post:last-of-type")
+      let getBlogPost = document.querySelector(".blog-post")
+      getLastPostOfBlogPost.remove()
+      let olderBtn = document.createElement("BUTTON")
+      olderBtn.innerText = "oLDER button"
+      getBlogPost.appendChild(olderBtn)
+    }
 
     </script>
   </body>
